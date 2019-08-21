@@ -1,4 +1,4 @@
-[data2,fs2] = audioread(['C:\Users\Tony\Desktop\pattern\3\2019-08-08 16_26_29.225.wav']);
+[data2,fs2] = audioread(['C:\Users\Tony\Desktop\git\Data\2019-08-16\Audio\Numeric\1\1_3.wav']);
 
 % %% 500
 % R = 500;
@@ -329,9 +329,9 @@ xlabel('Time (s)','FontSize',14,'FontWeight','bold')
 ylabel('Frequency (kHz)','FontSize',14,'FontWeight','bold')
 
 % 
-t3 = t2(1,1:344);
+t3 = t2(1,:);
 f3 = f2(921:939);
-s3 = s2(921:939,1:344);
+s3 = s2(921:939,:);
 
 figure('units', 'pixels', 'pos',[100 100 800 500], 'Color', [1 1 1]);
 imagesc(t3,f3/1000,log10(abs(s3)));
@@ -340,8 +340,8 @@ axis xy
 set(gca,'FontSize',14)
 xlabel('Time (s)','FontSize',14,'FontWeight','bold')
 ylabel('Frequency (kHz)','FontSize',14,'FontWeight','bold')
-set(gca,'XTick',(0.21:0.4:3));
-set(gca,'XTicklabel',([0.2 0.6 1 1.4 1.8 2.2 2.6]));
+%set(gca,'XTick',(0.21:0.4:3));
+%set(gca,'XTicklabel',([0.2 0.6 1 1.4 1.8 2.2 2.6]));
 
 %  %% 6000
 % 
